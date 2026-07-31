@@ -29,9 +29,18 @@
 
         <!-- Main Game Content Horizontal Tile Bar -->
         <main class="content-row">
-            <div class="tile active" data-title="Spider-Man" data-desc="Explore New York City as Spider-Man!" data-bg="spiderman">
-                <div class="tile-icon">🕷️</div>
-                <div class="tile-label">Spider-Man</div>
+            <!-- 
+              PERSONALIZATION:
+              This tile now represents Call of Duty: Vanguard.
+              We've updated:
+              - data-title: The name displayed in the info panel.
+              - data-desc: The description displayed in the info panel.
+              - data-bg: The key used to trigger the correct background in JS/CSS.
+              - The icon has been removed in favor of a full-size image inside the CSS.
+            -->
+            <div class="tile active cod-tile" data-title="Call of Duty: Vanguard" data-desc="Experience the raw intensity of WWII combat on a global scale. Rise on every front." data-bg="vanguard">
+                <!-- We will add the title label through CSS for better control with the background image -->
+                <div class="tile-label cod-label">C.O.D. Vanguard</div>
             </div>
 
             <div class="tile" data-title="God of War" data-desc="Journey across the Norse realms with Kratos and Atreus." data-bg="godofwar">
@@ -52,8 +61,12 @@
 
         <!-- Lower Panel: Displays details of currently selected game -->
         <footer class="game-info-panel">
-            <h2 id="active-title">Spider-Man</h2>
-            <p id="active-desc">Explore New York City as Spider-Man!</p>
+            <!-- 
+              PERSONALIZATION:
+              These IDs are updated dynamically by JavaScript when the 'vanguard' tile is active.
+            -->
+            <h2 id="active-title">Call of Duty: Vanguard</h2>
+            <p id="active-desc">Experience the raw intensity of WWII combat on a global scale. Rise on every front.</p>
             <div class="action-prompt">Press <strong>[X]</strong> or Click to Start</div>
         </footer>
 
