@@ -26,7 +26,8 @@ body {
 }
 
 /* Dynamic color theme overlays for selected tiles */
-.ps4-bg.spiderman { background: radial-gradient(circle at center, #8b0000 0%, #020b18 100%); }
+/* PERSONALIZATION: Added the dynamic background gradient when Vanguard is selected. */
+.ps4-bg.vanguard { background: radial-gradient(circle at center, #bf9e5f 0%, #020b18 100%); }
 .ps4-bg.godofwar { background: radial-gradient(circle at center, #4a2c00 0%, #020b18 100%); }
 .ps4-bg.horizon { background: radial-gradient(circle at center, #005a5b 0%, #020b18 100%); }
 .ps4-bg.library { background: radial-gradient(circle at center, #2c3e50 0%, #020b18 100%); }
@@ -86,6 +87,8 @@ body {
     cursor: pointer;
     backdrop-filter: blur(5px);
     transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    /* PERSONALIZATION: Ensure content doesn't overflow when we add background images */
+    overflow: hidden; 
 }
 
 .tile-icon {
@@ -129,3 +132,21 @@ body {
     font-size: 0.9rem;
     color: #00d2d3;
 }
+
+/* --- Personalization: Call of Duty: Vanguard Tile Styling --- */
+
+/* 1. Set the background image on the Vanguard tile */
+.cod-tile {
+    background-image: url('image_0.png'); /* IMPORTANT: Ensure the image is in the same folder as style.css */
+    background-size: cover; /* Scale the image to cover the entire tile */
+    background-position: center; /* Center the image within the tile */
+}
+
+/* 2. Position the specific COD label to sit cleanly at the bottom of the tile */
+.cod-label {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background behind the text */
