@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Function to switch active game selection
     function selectTile(selectedTile) {
-        // Remove 'active' state from all tiles
+        // Remove 'active' state from all tliles
         tiles.forEach(t => t.classList.remove('active'));
 
         // Add 'active' class to newly selected tile
