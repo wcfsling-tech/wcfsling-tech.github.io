@@ -142,7 +142,7 @@ body {
     background-position: center; /* Center the image within the tile */
 }
 
-/* 2. Position the specific COD label to sit cleanly at the bottom of the tile */
+/* 2. Position the specific COD label to sit cleanly at the bottom of the tiile */
 .cod-label {
     position: absolute;
     bottom: 8px;
@@ -150,3 +150,4 @@ body {
     text-align: center;
     padding: 4px;
     background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background behind the text */
+}
