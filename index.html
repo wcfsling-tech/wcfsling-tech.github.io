@@ -3,36 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
-    <!-- Link to the external CSS stylesheet for styling -->
+    <title>PlayStation 4 Dashboard</title>
+    <!-- Link to the stylesheet for PS4 styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Section: Contains the main title and welcome message -->
-    <header>
-        <h1 id="main-title">Welcome to My Website!</h1>
-        <p>Created by an aspiring web developer.</p>
-    </header>
+    <!-- Dynamic Ambient Background Container -->
+    <div id="dynamic-bg" class="ps4-bg"></div>
+    <div class="bg-overlay"></div>
 
-    <!-- Main Content Section -->
-    <main>
-        <section class="card">
-            <h2>About This Site</h2>
-            <p>This is a starter template hosted on GitHub Pages. I can customize this text, add images, and build awesome features!</p>
-            
-            <!-- Interactive Button -->
-            <button id="interactive-btn">Click Me!</button>
-            <p id="message-display"></p>
-        </section>
-    </main>
+    <div class="ps4-dashboard">
+        
+        <!-- Top Utility Bar (Clock, Notifications, User Profile) -->
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <span class="ps-logo">🎮 PlayStation</span>
+            </div>
+            <div class="top-bar-right">
+                <span class="status-item">🔔 <span id="notif-count">2</span></span>
+                <span class="status-item">👤 GamerTag_99</span>
+                <span class="status-item clock" id="ps4-clock">12:00 PM</span>
+            </div>
+        </header>
 
-    <!-- Footer Section: Contains copyright or quick details -->
-    <footer>
-        <p>&copy; 2026 My Awesome Website</p>
-    </footer>
+        <!-- Main Game Content Horizontal Tile Bar -->
+        <main class="content-row">
+            <div class="tile active" data-title="Spider-Man" data-desc="Explore New York City as Spider-Man!" data-bg="spiderman">
+                <div class="tile-icon">🕷️</div>
+                <div class="tile-label">Spider-Man</div>
+            </div>
 
-    <!-- Link to the external JavaScript file for interactivity -->
+            <div class="tile" data-title="God of War" data-desc="Journey across the Norse realms with Kratos and Atreus." data-bg="godofwar">
+                <div class="tile-icon">🪓</div>
+                <div class="tile-label">God of War</div>
+            </div>
+
+            <div class="tile" data-title="Horizon Zero Dawn" data-desc="Uncover the mysteries of a world ruled by machines." data-bg="horizon">
+                <div class="tile-icon">🏹</div>
+                <div class="tile-label">Horizon</div>
+            </div>
+
+            <div class="tile" data-title="Library" data-desc="View all installed applications and games." data-bg="library">
+                <div class="tile-icon">📚</div>
+                <div class="tile-label">Library</div>
+            </div>
+        </main>
+
+        <!-- Lower Panel: Displays details of currently selected game -->
+        <footer class="game-info-panel">
+            <h2 id="active-title">Spider-Man</h2>
+            <p id="active-desc">Explore New York City as Spider-Man!</p>
+            <div class="action-prompt">Press <strong>[X]</strong> or Click to Start</div>
+        </footer>
+
+    </div>
+
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
