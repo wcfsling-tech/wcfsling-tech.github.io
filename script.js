@@ -38,9 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Attach Click & Hover Events to all tiles
     tiles.forEach(tile => {
+        // PERSONALIZATION: If you hover or click the tile, the script dynamically updates the page!
         tile.addEventListener('mouseenter', () => selectTile(tile));
         tile.addEventListener('click', () => {
             alert(`🎮 Launching ${tile.getAttribute('data-title')}...`);
         });
     });
+
+    // PERSONALIZATION: Initialize the starting state to match the HTML definition (Vanguard active)
+    const initialTile = document.querySelector('.tile.active');
+    if(initialTile) {
+        selectTile(initialTile);
+    }
 });
